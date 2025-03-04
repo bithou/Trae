@@ -27,10 +27,31 @@
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        #score-container {
+        #game-info {
             margin-top: 20px;
-            font-size: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 400px;
+        }
+        #score-container, #level-container {
+            font-size: 20px;
             font-weight: bold;
+        }
+        #pause-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #pause-button:hover {
+            background-color: #45a049;
         }
         #game-over {
             position: absolute;
@@ -72,7 +93,11 @@
             <button id="restart-button">重新开始</button>
         </div>
     </div>
-    <div id="score-container">得分: <span id="score">0</span></div>
+    <div id="game-info">
+        <div id="score-container">得分: <span id="score">0</span></div>
+        <div id="level-container">关卡: <span id="level">1</span></div>
+        <button id="pause-button">暂停</button>
+    </div>
     
     <script src="snake.js"></script>
 </body>
